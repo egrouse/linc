@@ -6,8 +6,23 @@ class LinkController < ApplicationController
       hash  = Digest::MD5.hexdigest( params[:url] )
       tag   = hash[0..6]
       
-      # Create a new Link in the database
-      @lin  = Link.create( :href => params[:url], :md => hash, :tag => tag, :count => 0 )
+      # Check if this link already exists in the database
+      @lin  = Link.where( :md => hash )
+      if @lin.first.nil?
+        # Check if the tag exists already
+        tagl  = Link.where( :tag => tag )
+        
+        if !tagl.first.nil?
+          # We need a new tag...
+          thash = Digest::MD5.hexdigest( Time.to_s )
+          tag   = thash[0..6]
+        end
+        
+        # Create a new Link in the database
+        @lin  = Link.create( :href => params[:url], :md => hash, :tag => tag, :count => 0 )
+      else
+        @lin  = @lin.first
+      end
       
       # Redirect...
       redirect_to view_link_path( @lin.tag )
