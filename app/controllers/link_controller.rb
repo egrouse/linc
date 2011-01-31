@@ -18,6 +18,16 @@ class LinkController < ApplicationController
   end
 
   def visit
+    # Find the Link in the DB
+    @lin  = Link.where( :tag => params[:tag] )
+    
+    # Increment counter!
+    count = @lin.first.count + 1
+    @lin.first.count  = count
+    @lin.first.save
+    
+    # Redirect
+    redirect_to @lin.first.href
   end
 
 end
