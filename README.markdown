@@ -20,4 +20,4 @@ Installation should be easy to complete;
 
 Demo Site
 ---------
-There is a demo site, hosted on Heroku, available at [this demo site](http://linc.editaw.com)
+There is a demo site, hosted on Heroku, available at [this demo site](http://linc.heroku.com)
