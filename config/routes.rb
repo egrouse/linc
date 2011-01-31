@@ -1,7 +1,12 @@
 Linc::Application.routes.draw do
+  get "link/view"
+
   get "link/new"
 
   get "link/visit"
+  
+  # Base route
+  root  :to =>  'link#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

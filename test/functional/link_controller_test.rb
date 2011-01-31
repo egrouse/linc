@@ -6,6 +6,11 @@ class LinkControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should get view" do
+    get :view
+    assert_response :success
+  end
+
   test "should get visit" do
     get :visit
     assert_response :success
