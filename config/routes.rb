@@ -9,7 +9,8 @@ Linc::Application.routes.draw do
   root  :to     =>  'link#new', :as => :new_link
   
   # Links
-  match ':tag'  =>  'link#view', :as => :view_link
+  match ':tag'       =>  'link#visit', :as => :visit_link
+  match 'view/:tag'  =>  'link#view',  :as => :view_link
   
 
   # The priority is based upon order of creation:
