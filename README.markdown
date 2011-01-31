@@ -14,6 +14,7 @@ Installation
 ------------
 
 Installation should be easy to complete;
+
 * grab the repository contents
 * run bundle install
 * run rails server
