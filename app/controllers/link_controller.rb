@@ -15,6 +15,9 @@ class LinkController < ApplicationController
   end
 
   def view
+    # Find the link
+    @lin  = Link.where( :tag => params[:tag] )
+    @lin  = @lin.first
   end
 
   def visit
