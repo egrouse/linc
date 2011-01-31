@@ -7,8 +7,18 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= yield %>
+	
+	<header>
+		<h1>Linc</h1>
+	</header>
+	
+	<section id="content">
+		<%= yield %>
+	</section>
+	
+	<footer>
+		<%= link_to "https://github.com/egrouse/linc", "https://github.com/egrouse/linc", :target => "_blank" %>
+	</footer>
 
 </body>
 </html>

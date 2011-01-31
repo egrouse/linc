@@ -1,7 +1,6 @@
 <%= form_tag :new_link do %>
 	
 	<%= label_tag :url, "URL" %>
-	<%= text_field_tag :url %>
-	<%= submit_tag "Shorten" %>
+	<%= text_field_tag :url %><%= submit_tag "Shorten", :id => "commit" %>
 	
 <% end %>

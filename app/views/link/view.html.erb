@@ -1,3 +1,11 @@
-Shortlink: <%= link_to @sitepath + @lin.tag, visit_link_path( @lin.tag ) %><br />
-URL: <%= @lin.href %><br />
-Visits: <%= @lin.count %>
+<ul id="link-info">
+	<li>
+		<span>Shortlink</span> <%= link_to @sitepath + @lin.tag, visit_link_path( @lin.tag ), :target => '_blank' %>
+	</li>
+	<li>
+		<span>URL</span> <%= @lin.href %>
+	</li>
+	<li>
+		<span>Visits</span> <%= @lin.count %>
+	</li>
+</ul>
