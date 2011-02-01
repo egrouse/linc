@@ -23,3 +23,7 @@ Installation should be easy to complete;
 Demo Site
 ---------
 There is a demo site, hosted on Heroku, available at [this demo site](http://linc.heroku.com)
+
+Who Be Ye?
+----------
+I be Ellis Grouse, a drunkard student from England.
