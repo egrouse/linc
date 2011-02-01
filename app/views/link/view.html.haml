@@ -1,0 +1,10 @@
+%ul#link-info
+	%li
+		%span Shortlink
+		= link_to @sitepath + @lin.tag, visit_link_path( @lin.tag ), :target => '_blank'
+	%li
+		%span URL
+		= @lin.href
+	%li
+		%span Visits
+		= @lin.count
