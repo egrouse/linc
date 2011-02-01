@@ -17,6 +17,7 @@ Installation should be easy to complete;
 
 * grab the repository contents
 * run bundle install
+* run rake db:migrate
 * run rails server
 
 Demo Site
