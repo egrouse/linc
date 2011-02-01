@@ -32,6 +32,7 @@ GEM
     builder (2.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    haml-edge (3.1.79)
     i18n (0.5.0)
     less (1.2.21)
       mutter (>= 0.4.2)
@@ -77,6 +78,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  haml-edge
   more
   rails (= 3.0.3)
   sqlite3-ruby
